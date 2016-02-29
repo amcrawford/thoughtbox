@@ -24,7 +24,7 @@
     </thead>
     <tbody>
       <% @links.each do |link| %>
-      <tr>
+      <tr id="link-<%=link.id%>">
         <th class="center"><%= link.title %></th>
         <th class="center"> <a href="<%=link.url%>">Link</a></th>
         <th class="center"> <a href="<%=edit_link_path(link)%>">Edit</a></th>
