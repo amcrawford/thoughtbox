@@ -3,4 +3,5 @@ $(document).ready(function(){
   filterByRead();
   filterByUnread();
   searchIdeas();
+  setSortByBatch();
 });
