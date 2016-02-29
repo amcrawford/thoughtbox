@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
     if current_user
-      redirect_to user_path(@user)
+      redirect_to links_path
     end
   end
 
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email_address: params[:session][:email_address])
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      redirect_to links_path
     else
       flash.now[:error] = "Invalid Login. Try Again."
       render :new
