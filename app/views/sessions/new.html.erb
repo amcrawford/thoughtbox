@@ -1,4 +1,4 @@
-<h2>Login</h2>
+<h2>Please Login to Continue or <a href="<%=new_user_path%>">SignUp Here</a></h2>
 <%= form_for :session, url: login_path do |f| %>
   <%= f.label :email_address %>
   <%= f.text_field :email_address%>
