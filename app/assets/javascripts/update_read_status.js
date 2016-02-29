@@ -1,10 +1,3 @@
-$(document).ready(function(){
-  addQualityListeners();
-  filterByRead();
-  filterByUnread();
-  searchIdeas();
-});
-
 function addQualityListeners(){
   $.getJSON('/api/v1/links', function(links){
     $.each(links, function(index, link){
