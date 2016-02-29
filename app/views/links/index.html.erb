@@ -18,6 +18,7 @@
       <tr>
         <th>Title</th>
         <th>Link</th>
+        <th>Edit</th>
         <th>Read?</th>
       </tr>
     </thead>
@@ -26,6 +27,7 @@
       <tr>
         <th class="center"><%= link.title %></th>
         <th class="center"> <a href="<%=link.url%>">Link</a></th>
+        <th class="center"> <a href="<%=edit_link_path(link)%>">Edit</a></th>
         <th class="center" id="<%=link.id%>-edit-read"><%= link.read.to_s %></th>
       </tr>
       <% end %>
