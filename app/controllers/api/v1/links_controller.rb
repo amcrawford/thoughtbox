@@ -2,7 +2,7 @@ class Api::V1::LinksController < Api::V1::BaseController
   respond_to :json
 
   def index
-    respond_with Link.all
+    respond_with current_user.links.all
   end
 
   def show
