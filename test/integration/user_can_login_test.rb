@@ -15,7 +15,7 @@ class UserCanLoginTest < ActionDispatch::IntegrationTest
 
     visit root_path
 
-    assert_equal user_path(user), current_path
+    assert_equal links_path, current_path
   end
 
   test "user can login" do
@@ -30,7 +30,7 @@ class UserCanLoginTest < ActionDispatch::IntegrationTest
     click_button "Login"
 
     assert page.has_content? "Logout"
-    assert_equal user_path(user.id), current_path
+    assert_equal links_path, current_path
   end
 
   test 'user cannot login with incorrect information' do

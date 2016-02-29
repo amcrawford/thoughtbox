@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  url: MyString
-  read: MyString
-  user_id: 
+  url: 
+  read:
+  user_id:
 
 two:
   title: MyString
-  url: MyString
-  read: MyString
-  user_id: 
+  url:
+  read:
+  user_id:
