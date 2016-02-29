@@ -16,8 +16,8 @@
   <input class='validate' type="text" id="search-text" placeholder="Search Links">
 </div><br>
 <div class="container" id="user-links">
-  <button type="button" name="button" id="filter-read">Show Read</button>
-  <button type="button" name="button" id="filter-unread">Show Unread</button>
+  <center><button type="button" name="button" class="btn btn-default" id="filter-read">Show Read</button>
+  <button type="button" name="button" class="btn btn-default" id="filter-unread">Show Unread</button></center>
   <table class="centered">
     <thead>
       <tr>
@@ -33,7 +33,7 @@
         <th class="center link-title"><%= link.title %></th>
         <th class="center"> <a href="<%=link.url%>">Link</a></th>
         <th class="center"> <a href="<%=edit_link_path(link)%>">Edit</a></th>
-        <th class="center" id="<%=link.id%>-edit-read"><%= link.read.to_s %></th>
+        <th class="center read-status" id="<%=link.id%>-edit-read"><%= link.read.to_s %></th>
       </tr>
       <% end %>
     </tbody>
