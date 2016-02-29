@@ -12,6 +12,9 @@
 </div>
 
 <h4 class="center">Past Links</h4>
+<div class= "container" id="search-bar">
+  <input class='validate' type="text" id="search-text" placeholder="Search">
+</div>
 <div class="container" id="user-links">
   <table class="centered">
     <thead>
@@ -22,10 +25,10 @@
         <th>Read?</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="link-index">
       <% @links.each do |link| %>
       <tr id="link-<%=link.id%>">
-        <th class="center"><%= link.title %></th>
+        <th class="center link-title"><%= link.title %></th>
         <th class="center"> <a href="<%=link.url%>">Link</a></th>
         <th class="center"> <a href="<%=edit_link_path(link)%>">Edit</a></th>
         <th class="center" id="<%=link.id%>-edit-read"><%= link.read.to_s %></th>

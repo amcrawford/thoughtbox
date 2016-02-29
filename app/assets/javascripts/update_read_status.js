@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  addQualityListeners()
+  addQualityListeners();
+  searchIdeas();
 });
 
 function addQualityListeners(){
