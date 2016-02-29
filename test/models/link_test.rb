@@ -6,7 +6,7 @@ class LinkTest < ActiveSupport::TestCase
     @link = user.links.create(title: "link", url: "https://www.facebook.com/")
   end
 
-  test "#ideas have a title body and quality" do
+  test "#links have the correct attributes" do
     assert @link.title
     assert @link.url
     assert @link.user_id

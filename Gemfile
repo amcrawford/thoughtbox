@@ -20,6 +20,7 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem "capybara"
+  gem 'webmock'
 end
 
 group :development do
