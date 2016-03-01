@@ -25,6 +25,7 @@
         <th>Link</th>
         <th>Edit</th>
         <th>Read?</th>
+        <th>Mark as Read</th>
       </tr>
     </thead>
     <tbody id="link-index">
@@ -34,6 +35,7 @@
         <th class="center"> <a href="<%=link.url%>">Link</a></th>
         <th class="center"> <a href="<%=edit_link_path(link)%>">Edit</a></th>
         <th class="center read-status" id="<%=link.id%>-edit-read"><%= link.read.to_s %></th>
+        <th class="center" id="<%=link.id%>-edit-read-status"><%= link.print_read_status %></th>
       </tr>
       <% end %>
     </tbody>

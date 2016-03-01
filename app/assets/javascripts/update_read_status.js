@@ -7,7 +7,7 @@ function addQualityListeners(){
 }
 
 function updateReadQuality(id){
-  $('#' + id + '-edit-read').on('click', function(){
+  $('#' + id + '-edit-read-status').on('click', function(){
     event.preventDefault();
 
     $.getJSON('/api/v1/links/'+ id, function(link){
@@ -18,7 +18,6 @@ function updateReadQuality(id){
 };
 
 function saveNewQuality(id, newQuality){
-  console.log(newQuality)
   $.ajax({
     type: 'PUT',
     url: '/api/v1/links/' + id + '.json',
@@ -27,6 +26,11 @@ function saveNewQuality(id, newQuality){
     },
     success: function(link){
       $('#' + id + '-edit-read').html(newQuality.toString());
+      if(newQuality){
+        $('#' + id + '-edit-read-status').html("Mark as Unread")
+      } else {
+        $('#' + id + '-edit-read-status').html("Mark as Read")
+      }
     }
   })
 };
