@@ -30,6 +30,7 @@ function saveNewQuality(id, newQuality){
         $('#' + id + '-edit-read-status').html("Mark as Unread")
       } else {
         $('#' + id + '-edit-read-status').html("Mark as Read")
+
       }
     }
   })
